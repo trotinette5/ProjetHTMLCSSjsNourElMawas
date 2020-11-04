@@ -1,0 +1,360 @@
+  body {     /* relatif à la balise body càd tout ce qui est visible par l'utilisateur */
+    font-family: "Gill Sans", sans-serif;  /* police d'écriture */ 
+    padding: 0;   /* communement appelé "reset", affecter la marge et le padding à la balise body permet de ne plus avoir d'espace entre les éléments du site par défaut */
+    margin: 0;
+  }    
+
+  header li a {  /* relatif aux éléments hyperliens d'une liste dans le header càd tous à l'exception du menu déroulant de googletranslate que l'on veut en haut à droite sans padding */
+    padding: 22px 22px;  /*espacement entre les éléments du header de 20px en haut et 20 px à droite*/
+    display: block;  /* permet d'afficher les éléments du header comme des blocs et ainsi pouvoir jouer avec leurs padding */
+  }
+
+  nav {     /* Ici notre nav désigne l'entierté de la barre du haut car on n'utilise pas d'autres nav dans notre site, on aurait également pu utiliser une classe ou la balise header*/
+    background-color: rgb(245, 207, 176); /*couleur de fond */
+    font-family: "Avenir Next", sans-serif;  /* police d'écriture */ 
+    width: 100%; /* 100% de largueur permet à la barre de naviguation de s'étendre sur toute la page */
+    opacity: 0.8;  /* on réduit légèrement l'opacité */ 
+    overflow: hidden; /* si un élément déborde de la barre de naviguation, il sera alors caché */
+  }
+
+  nav a:hover{   /*change les propriétés des hyperliens de la barre de naviguation au survole de la souris */
+    color: #575454;   
+    cursor: pointer;  /*change l'apparence du curseur */
+    transition: 0.8s ease; /* transition pour l'effet survole de la souris "ease" càd lent au début, puis rapide, puis lent sur la fin, le tout sur une durée de 0,8seconde */
+    filter: brightness(150%); /* on rend la police d'écriture 1,5 fois plus claire au survole de la souris */
+  }
+  
+
+  nav ul{   /* relatif à la liste non ordonnée dans la balise nav, ici la balise nav fait référence a notre barre de naviguation car unique dans le site */
+    list-style: none; /* pour enlever les bullets de la liste */
+    margin: 0; /* on rend la taille de la marge nulle */
+    padding: 0;  /* pour enlever l'indentation par defaut de la liste */
+  }
+
+  nav li a{ /* relatif au élément hyperlien dans notre barre de naviguation */
+    color: black;  /* on  change leurs couleurs en noir*/
+    text-decoration: none; /* on enlève la mise en forme d'une lien visible (souligné et bleu) */
+    font-size: 23px; /* la taille de la police */ 
+  }
+
+  nav li {  /* permet à tout les éléments de la navbar (menu déroulant de googletranslate qui n'est pas un hyperlien inclu) d'être à droite */
+    float: right;
+  }
+
+  #logo {    /* relatif au logo du site */
+    font-family: "Apple Chancery", cursive;   /* police d'écriture */ 
+    font-weight: bold;  /* pour mettre en gras */ 
+    float: left; /* on place le logo sur le côté gauche de son conteneur  */
+  }
+
+  #logo a:hover{    /*on désactive les effets de survole de la souris sur le logo pour ne pas tromper l'utilisateur */
+    color: inherit;  /* la couleur du logo ne réagit pas au survole de la souris */
+    cursor: default; /* le curseur de la souris ne devient pas un "pointer", une "petite main" au survole du logo */
+  }
+  
+
+  #imageFond {     /*permet de fixer l'image en image de fond */
+    background: url(image/girl.jpg) no-repeat fixed 50% 50%;
+    /* no-repeat empêche d'avoir l'image affiché en mosaique */
+    /* fixed permet à notre image de rester fixe même lorsque l'on scroll sur le site */
+    /* 50% 50% permet de positioner l'image au centre, les valeurs correspondent respectivement à la position horizontale et verticale */
+    background-size: cover; /* positionner l'image d'arrière-plan à l'échelle la plus grande possible afin que la zone d'arrière-plan soit entièrement couverte par l'image d'arrière-plan */
+    padding-top: 150px;  /*remplissage en haut, ici distance avec notre barre de naviguation */
+    height: 650px;  /* hauteur de l'image permet d'afficher plus ou moins notre image de fond*/
+  }
+
+
+  h1 { /* relatif a notre titre principal de notre site qui apparait sur toutes les pages */
+    font-family: "American Typewriter", cursive;  /* cursive */
+    font-variant: small-caps; /* toutes les lettres apparaissent en majuscule */
+    text-align: center; /* alignement du texte centré*/
+    color: rgb(235, 217, 202);  /* couleur du texte */
+    text-shadow: 3px 3px 3px  black;  /* décalage de lombre du texte de 3px sur les 2 axes X et Y, rayon de flou de 3px et couleur de l'ombre noire*/
+    font-size: 110px;   /* taille de la police  */
+    margin-top: 70px; /* taille de la marge en haut séparant notre header de notre titre principal*/
+  }
+  #trait-separation {   /* on dessine un trait entre notre h1 et h2 */
+    background-color: rgb(245, 207, 176); /* couleur du trait */
+    box-shadow: 3px 3px 3px black;  /* décalage de lombre du texte de 3px sur les 2 axes X et Y, rayon de flou de 3px et couleur de l'ombre noire*/
+    height: 2px;   /* épaisseur du trait */
+    width: 700px;    /* longueur du trait*/
+    margin: auto;   /* on donne la valeur auto aux marges latérales ce qui permet de centrer notre trait*/
+  }
+  h2 {  /* titre secondaire qui désigne le nom de la page spécifique */ 
+    text-align: center;
+    color: rgb(235, 217, 202);
+    font-size: 48px;
+    text-shadow: 3px 3px 3px black;
+    font-family: "Chalkduster", fantasy;
+  }
+
+  h3 { /* titres à l'intérieur des divisions dans les pages */ 
+    font-family: "Avenir Next", sans-serif; 
+    font-weight: bold;
+    font-size: 40px;
+    font-variant: small-caps; /* toutes les lettres apparaissent en majuscule */
+    padding: 20px 0px 20px 0; /* 20px d'espacement en haut et en bas */
+    text-align: center;  /* on centre le texte*/
+  }
+
+  h4 { /* titre dans le pied de page */
+    font-family: "Avenir Next", sans-serif; 
+    font-variant: small-caps; /* toutes les lettres apparaissent en majuscule */
+    padding: 20px 0px 20px 0; /* 20px d'espacement en haut et en bas */
+    font-size: 25px;
+    text-align: center;/* on centre le texte*/
+  }
+
+
+  
+ /*Concernant la division notre entreprise */
+
+  #notreEntreprise {
+    background-color:rgb(245, 207, 176);    /*défini la couleur de fond du conteneur introduction */
+    padding: 10px 0px 150px 0;    /*on défini le padding du conteneur introduction, 10px en haut et 150px en bas */
+  }
+  #notreEntrepriseDescription {
+    padding: 0px 50px;   /* on defini la distance du texte par rapport à la bordure */
+    text-align: center;  /* on centre le texte*/
+    font-size: 25px;   /* taille du texte */
+  }
+
+
+
+  /*Concernant la division nos services */
+
+  #services-section ul{     /* pour enlever les bullets de la liste */
+    list-style: none;
+  }
+
+  #services a{    /* Permet aux hyperliens de la division nos services d'être de couleur noir */
+    color: black;
+  }
+
+  #services-section {
+    height: 1000px;    /* longueur verticale de la division service*/
+    background-color: #e0cab8;
+    padding: 10px 10px;
+  }
+ 
+  #services li {   /* relatif aux images d'arrière plan*/
+    height: 300px; /* longueur des images d'arrière plan*/
+    width: 490px;  /* largueur des images d'arrière plan*/
+    margin: 50px 100px 0 90px;  /* on défini la marge des images pour les placer */
+    box-shadow: -8px 8px 10px 1px rgba(63, 9, 9, 0.329); /* bow-shadow défini ci-dessus*/
+  }
+
+  #services p {   /*  relatif aux textes */ 
+    background-color: rgb(237, 187, 153); /* couleur de fond */
+    font-size: 25px; /* taille de la police */
+    height: 25px;  /* longueur verticale de l'encadré */ 
+    width: 230px;  /*largueur de l'encadré */
+    padding: 30px; /* 30px en haut pour que le texte soit bien centré */
+    margin: 40px -200px 0 0;  /* on décale le texte de l'image 40px du haut et 200px à droite*/
+    box-shadow: -8px 8px 0 1px rgba(63, 9, 9, 0.329);  /* bow-shadow défini ci-dessus*/
+    border-radius: 1%; /* on arrondie légèrement les bords du cadre contenant le texte*/
+    float:right;  /* on place notre texte à gauche de l'image plateforme elearning */
+    text-align: center;  /* on centre le texte dans le cadre */
+  }
+
+
+  #serviceVR p {   /* relatifs au texte VR  */ 
+    background-color: rgb(237,187,153);
+    margin-left: -200px;   /* serviceVR p hérite des propriétés de margin de services p ( par exemple pour le top) mais on spécifie ici le margin left car le texte doit ressortir à gauche et pas à droite*/ 
+    box-shadow: -8px 8px 0 1px rgba(63, 57, 9, 0.329); 
+    float: left; /* on place notre texte à droite de l'image VR */
+  } 
+
+  #services #serviceVR {  /*on place à droite notre élément d'id serviceVR donc le texte et l'image compris dans la balise li */
+    float: right;
+  }
+
+  #services p:hover {   /*effet au survole du texte */
+    background-color: #FFE4C4;
+    color: #808080;
+    cursor: pointer;
+    transition: 0.8s ease; /* transition pour l'effet survole de la souris "ease" càd lent au début, puis rapide, puis lent sur la fin, le tout sur une durée de 0,8seconde */
+  }
+
+  /* on place les images en arrière-plan pour pouvoir chevaucher le texte */
+  #servicePlateformeElearning {
+    background: url(image/onlineF.jpg);
+  }
+  #serviceVR {
+    background: url(image/produitVR.jpg);
+  }
+
+
+
+
+  /* Plateforme Elearning */
+  
+#presentation{    /* division de la plateforme elearning */
+  background-color:rgb(245, 207, 176);   /* on change la couleur de fond de la division entière */
+}
+
+.bloc-elearning-div { /*blocs de contenu à l'intérieur de la presentation */
+ text-align: center;  /* le texte est centré */
+ display: inline-table;  /* spécifie un comportement d'une table sur une ligne, ici les éléments s'affiche sur la même ligne */
+ width:45%;  /* la largeur de la division prend un peu moins de la moitié de l'écran */
+ margin: 0; /* pas de marge */ 
+ padding: 0 0 200px 30px; /* on agrandi le padding en bas et à gauche*/
+ font-size: 25px;
+ }
+
+
+.certificat-countdown p {   /* Permet de modifier l'apparence de notre compte à rebours */
+  font-size: 50px;     /*change la taille de la police */
+  color:blue;  /* change la couleur en bleu */
+  border:3px dotted black;  /* on encadre */
+}
+
+
+
+
+
+
+/* Solutions VR */
+
+
+.divisionSolutionsVR {
+  background-color:rgb(245, 207, 176);/* on change la couleur de fond de la division entière */
+}
+
+.boutonExplorez{    /*on centre le bouton explorez*/
+  text-align: center;
+}
+
+
+/* Galerie d'images */
+
+.galerie {
+    display: grid; /* disposer le contenu dans une grille */
+    grid-template-columns: repeat(8, 170px);  /* créer 8 colonnes de 170px chacunes*/ 
+    grid-template-rows: repeat(8, 90px); /* créer 8 lignes de 90px chacunes*/ 
+    grid-gap: 15px; /* defini l'espace entre les colonnes de grilles et les lignes de grilles en pixel */
+}
+
+.galerie_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* les images remplissent entièrement leurs conteneurs (ici grilles) en se dimensionnant pour maintenir un bon ratio */
+}
+
+
+/* On positionne les différents éléments dans la grille */
+.imageVR {
+  grid-column-start: 1;  /*place le contenu à la ligne 1 des colonnes et la fini à la 3*/
+  grid-column-end: 3;
+  grid-row-start: 1; /*place le contenu à la ligne 1 des rows et la fini à la 3*/
+  grid-row-end: 3;
+}
+
+.texteVR {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.videoVR {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.imageVR2 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 9;
+  height: 450px;
+  width: 720px;
+}
+
+
+
+
+
+
+
+
+
+
+/*  Equipe  */
+
+
+.blocEquipe { /* division de la page équipe */
+  text-align : center;    /* le texte est centré */
+  background-color: rgb(237, 187, 153);
+  padding: 50px 0px 250px 0; 
+}
+
+.blocMembre {
+ display: inline-table;  /* spécifie un comportement d'une table sur une ligne, ici les éléments s'affiche sur la même ligne */
+  width:30%;/* un bloc fait 1/3 de largeur de l'écran */
+}
+
+.photo{  /*portrait des membres de l'équipe */ 
+  width:250px;
+  height: 250px;
+  border-radius: 50%;     /* permet d'afficher l'image en cercle */
+}
+
+/* on modiefie l'apparence des devises */
+#omatexte {             
+  font-size: 17px;
+  font-family: "Avenir Next", sans-serif; 
+}
+
+#armandtexte {
+  font-size: 17px;
+  font-family: "Avenir Next", sans-serif; 
+}
+
+#teutatexte {
+  font-size: 17px;
+  font-family: "Avenir Next", sans-serif; 
+}
+
+
+
+/* pied de page */
+
+footer {   
+  background-color: #f1e1da;  
+  padding: 10px 0px 10px 0px;    /*espace en haut et en bas */
+  text-align: center; 
+}
+
+form {                /* relatif au formulaire de bas de page*/
+  width: 80%;   /* largueur du formulaire*/
+  margin: auto;   /* on donne la valeur auto aux marges latérales ce qui permet de centrer notre trait*/
+}
+input, textarea, button {
+  font-family: "Avenir Next", sans-serif; 
+  font-size: 20px; 
+  border-radius: 5px; /* largeur de la bordure des zones de saisies*/
+  width: 60%;  /* largeur des zones de saisies*/
+  padding: 10px 10px;   
+  margin: 2px 0px;    /* espace entre les bulles pour inserer du texte*/
+}
+textarea {
+  height: 100px; /* on augmente la hauteur de la zone de saisie de texte */
+}
+button {
+  font-size: 30px;     /* taille de la police d'écriture a l'intérieur de la balise button donc dans le footer mais également sur le click me de solution VR*/
+  background-color: rgb(237, 187, 153);
+}
+button:hover {
+  background-color: #FFE4C4;
+  color: #808080;
+  cursor: pointer;
+  transition: 1s linear; /* transition de l'effet de survole de la souris avec une vitesse linéaire sur 1seconde */
+}
+
+iframe {              /* modifie la taille de la googlemap et de la vidéo */
+ width: 600px;
+ height: 400px;
+}

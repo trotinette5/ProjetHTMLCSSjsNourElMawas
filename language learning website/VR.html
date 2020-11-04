@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" ></script>
+    <title> Like a mother tongue </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+              <li id="logo"><a href="index.html">Like a mother tongue</a></li>
+              <li>
+                  <div id="google_translate_element"></div>     <!-- penser à séparer le code -->
+                  <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+              </li>
+              <li><a href="equipe.html">Équipe</a></li>
+              <li><a href="VR.html">Apprentissage en réalité virtuelle</a></li>
+              <li><a href="elearning.html">Plate-forme e-learning</a></li>
+              <li><a href="index.html">Accueil</a></li>
+            </ul>
+        </nav>
+          <div id="imageFond">
+               <h1>Like a mother tongue</h1>
+                <div id="trait-separation"></div>
+                <h2>Solutions VR</h2>
+          </div>  
+    </header>
+
+
+    <div class="divisionSolutionsVR">
+        <div class="boutonExplorez">
+           <button onclick="typeWriter()">Explorez!</button> 
+           </div>
+            <div class="galerie">
+                <figure class="imageVR">
+                    <img src="image/OIP.jpg" alt="réalité virtuelle interaction" class="galerie_image">
+                </figure>
+                <figure class="texteVR">
+                <p id="typewriter"></p>
+                </figure>
+                <figure class="videoVR">
+               <iframe  src="https://www.youtube.com/embed/LUiSutk7Wso?start=10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </figure>
+                <figure class="imageVR2">
+                    <img src="image/London-VR.jpg" alt="VR dans Londres" class="galerie_image">
+                </figure>
+            </div>
+        </div>
+    
+             
+    
+        <footer>    <!-- bas de page -->
+            <h4>Contactez-nous</h4>
+            <form>   <!-- on créer un formulaire de contact qui pourra être plus tard être relié à une base de donnée via php -->
+              <input placeholder="Prénom">  <!-- balise permettant a l'utilisateur de saisir des données dans un formulaire, placeholder indique le texte à l'intérieur de la bulle -->
+              <input placeholder="Nom">
+              <input placeholder="E-mail">
+              <textarea placeholder="Saisie message"></textarea> <!-- même chose que pour input mais permet de saisir sur plusieurs lignes -->
+              <button>Envoyer</button>   <!-- bouton permet un contrôle interactif -->
+            </form>
+            <div id="map">   <!-- conteneur de la googlemap-->
+              <h4> Notre siège</h4>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79041.43812832005!2d-1.3176273995424452!3d51.75050176297567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48713380adc41faf%3A0xc820dba8cb547402!2sOxford%2C%20Royaume-Uni!5e0!3m2!1sfr!2sfr!4v1604068488197!5m2!1sfr!2sfr" ></iframe>
+            </div>   
+            <p>©2020 IPM Lille</p>
+          </footer>
+        </body>
+      </html>

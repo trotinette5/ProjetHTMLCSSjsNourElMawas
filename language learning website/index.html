@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">    <!-- défini la langue de la page web-->
+<head>
+    <meta charset="UTF-8">  <!-- défini le type d'encodage-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" ></script>
+    <title> Like a mother tongue </title>
+</head>
+<body>  <!-- la balise body contient le corps du document html càd tt les informations visible par l'utilisateur --> 
+    <header>    <!-- apparait au début de toutes les pages -->
+        <nav>     <!-- le menu de naviguation-->
+            <ul>     <!-- liste non ordonnée -->
+              <li id="logo"><a href="index.html">Like a mother tongue</a></li>
+              <li>
+                  <div id="google_translate_element"></div>     <!-- relatif à la fonction javascript-->
+                 <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>   <!-- Appel de l'API de google translate -->
+              </li>
+              <li><a href="equipe.html">Équipe</a></li>
+              <li><a href="VR.html">Apprentissage en réalité virtuelle</a></li>
+              <li><a href="elearning.html">Plate-forme e-learning</a></li>
+              <li><a href="index.html">Accueil</a></li>
+            </ul>
+        </nav>
+          <div id="imageFond"> <!-- conteneur permettant de contenir notre image de fond défini en css -->
+               <h1>Like a mother tongue</h1>   <!-- titre principal du site -->
+                <div id="trait-separation"></div>    <!-- conteneur pour le trait dessiné en css -->   
+                <h2>Solution innovante d'apprentissage des langues</h2>  <!-- titre secondaire -->
+          </div>
+    </header>
+
+    <section id="notreEntreprise">   <!-- on regroupe le contenu par thématique ici l'intro-->
+        <h3>Notre entreprise</h3>
+        <div id="notreEntrepriseDescription">
+              <p> <i>"Like a mother tongue"</i> est un centre d'apprentissage des langues, nous existons depuis 10 ans et accueillons chaque année plus de 1500 apprenants sur notre site. Grâce à nos solutions innovantes, nous vous assurons un apprentissage ludique et efficace. Notre entreprise, leader dans son domaine, vous propose deux produits révolutionnaires dans le monde pédagogique, qui vous permettront d'acquérir rapidement et façilement la langue étrangère que vous désirez apprendre.<br/>  Apprenez à communiquer avec le monde. Apprenez les langues avec <i>"like a mother tongue"</i>.</p>
+            </div>
+    </section>
+
+    
+    <section id="services-section">   <!-- on regroupe le contenu par thématique ici les services -->
+            <h3>Nos services</h3>
+            <ul id="services">  <!-- présentation des services sous forme d'une courte liste stylisé en css avec hyperlien permettant directement d'aller à la page du service proposé -->
+              <!-- -->
+              <li id="servicePlateformeElearning"><a href="elearning.html"><p>Plate-forme e-learning</p></a></li>
+              <li id="serviceVR"><a href="VR.html"><p>Apprentissage VR</p></a></li>
+            </ul>
+    </section>
+    
+    <footer>    <!-- bas de page -->
+            <h4>Contactez-nous</h4>
+            <form>   <!-- on créer un formulaire de contact qui pourra être plus tard être relié à une base de donnée via php -->
+              <input placeholder="Prénom">  <!-- balise permettant a l'utilisateur de saisir des données dans un formulaire, placeholder indique le texte à l'intérieur de la bulle -->
+              <input placeholder="Nom">
+              <input placeholder="E-mail">
+              <textarea placeholder="Saisie message"></textarea> <!-- même chose que pour input mais permet de saisir sur plusieurs lignes -->
+              <button>Envoyer</button>   <!-- bouton permet un contrôle interactif -->
+            </form>
+            <div id="map">   <!-- conteneur de la googlemap-->
+              <h4> Notre siège</h4>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79041.43812832005!2d-1.3176273995424452!3d51.75050176297567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48713380adc41faf%3A0xc820dba8cb547402!2sOxford%2C%20Royaume-Uni!5e0!3m2!1sfr!2sfr!4v1604068488197!5m2!1sfr!2sfr" ></iframe>
+            </div>   
+            <p>©2020 IPM Lille</p>
+          </footer>
+        </body>
+      </html>
